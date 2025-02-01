@@ -1,2 +1,4 @@
-binaryName:
+Commands:
   - main
+
+CommandPaths: []

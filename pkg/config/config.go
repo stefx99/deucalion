@@ -19,8 +19,8 @@ type Config struct {
 	LogLevel           string
 	ReconciliationLoop int
 	// Services configuration
-	BinaryName []string
-	BinaryPath []string
+	CommandNames []string
+	CommandPaths []string
 }
 
 func Get() *Config {
@@ -50,8 +50,8 @@ func Get() *Config {
 			LogLevel:           viper.GetString("logLevel"),
 			ReconciliationLoop: viper.GetInt("reconciliationLoop"),
 
-			BinaryName: viper.GetStringSlice("binaryName"),
-			BinaryPath: viper.GetStringSlice("binaryPath"),
+			CommandNames: viper.GetStringSlice("Commands"),
+			CommandPaths: viper.GetStringSlice("CommandPaths"),
 		}
 	})
 
